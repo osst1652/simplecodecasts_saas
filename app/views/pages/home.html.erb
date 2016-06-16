@@ -12,7 +12,7 @@
            <h2 class="text-center"> Basic Membership</h2>
            <h4>Sign up for a free account and get basic access</h4>
            <br>
-           <%= link_to "Sign up Free", new_user_registration_path, class:'btn btn-primary btn-lg btn-block'%>
+           <%= link_to "Sign up Free", new_user_registration_path(Plan:@basic_plan.id), class:'btn btn-primary btn-lg btn-block'%>
         </div>
     </div>
     <div class="col-md-6">
@@ -20,7 +20,7 @@
            <h2 class="text-center"> Pro Membership(10$)</h2>
            <h4>Sign up for the pro membership and get access to all features</h4>
            <br>
-            <%= link_to "Sign up Pro", new_user_registration_path, class:'btn btn-success btn-lg btn-block'%>
+            <%= link_to "Sign up Pro", new_user_registration_path(Plan:@pro_plan.id), class:'btn btn-success btn-lg btn-block'%>
         </div>
     </div>
 </div>
