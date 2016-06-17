@@ -16,6 +16,10 @@ class ProfilesController < ApplicationController
         end
         
     end
+    
+    def edit
+        
+    end
 
     private
         def profile_params
