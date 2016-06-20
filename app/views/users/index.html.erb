@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <ul class="list-unstyled">
+            <% @users.each do |user| %>
+                <%if user.profile%>
+                    <li>
+                        <div class ="well row <%= cycle('white','') %>">
+                            <div class="col-sm-4 text-center">
+                                <div class="well">
+                                    <%= link_to user do%>
+                                        <%if user.profile.job_title == "Developer" %>
+                                            <span class="job_title_icon_community"><i class='fa fa-code'></i></span>
+                                        <%elsif user.profile.job_title == "Entrepreneur"%>
+                                            <span class="job_title_icon_community"><i class='fa fa-lightbulb-o'></i></span>
+                                        <%elsif user.profile.job_title == "Investor" %>
+                                            <span class="job_title_icon_community"><i class= 'fa fa-dollar'></i></span>
+                                        <%end%>
+                                    <% end %>
+                                </div>
+                            </div>
+                            <div>
+                                <%= link_to user do%>
+                                    <h2> <%= user.profile.first_name%> <%= user.profile.last_name%></h2>
+                                    <p><%= user.profile.job_title%></p>
+                                <% end%>
+                            </div>
+                        </div>
+                    </li>
+                <%end%>
+            <%end%>
+        </ul>
+    </div>
+</div>
