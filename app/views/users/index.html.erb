@@ -1,5 +1,9 @@
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
+      <div class="well">
+          <h1 class="text-center"> The Dev Match Community</h1>
+          <p class="text-center">Welcome to the Dev Match Community.</br> Users with filled profiles will appear here.</p>
+      </div>
       <ul class="list-unstyled">
             <% @users.each do |user| %>
                 <%if user.profile%>
@@ -7,6 +11,7 @@
                         <div class ="well row <%= cycle('white','') %>">
                             <div class="col-sm-4 text-center">
                                 <div class="well">
+   
                                     <%= link_to user do%>
                                         <%if user.profile.job_title == "Developer" %>
                                             <span class="job_title_icon_community"><i class='fa fa-code'></i></span>
@@ -33,5 +38,12 @@
                 <%end%>
             <%end%>
         </ul>
+    <div class="col-md-3"> 
+        <div class="well">
+                    <%= link_to "Back", :back, class:'btn btn-default' %>
+        </div>
+
+    </div>
+
     </div>
 </div>
